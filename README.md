@@ -1,2 +1,4 @@
-# term-shell-command-el
-Run Shell Command in Terminal Buffer
+term-run-el
+===========
+
+Run command in terminal buffer.
