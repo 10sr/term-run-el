@@ -60,8 +60,9 @@ This function returns the buffer where the process ran."
       (let ((inhibit-read-only t))
         (goto-char (point-max))
         (insert "\n")
-        (insert "Start executing "
-                program)
+        (insert (format "Start executing %s %S"
+                        program
+                        args))
         (add-text-properties (point-at-bol)
                              (point-at-eol)
                              '(face bold))
