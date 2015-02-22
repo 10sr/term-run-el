@@ -39,7 +39,9 @@
 
 If BUFFER-OR-NAME is given, use this buffer.  In this case, old process in the
 buffer will be destroyed.  Otherwise, new buffer will be generated automatically
-from PROGRAM."
+from PROGRAM.
+
+This function returns the buffer where the process ran."
   (let* ((buf (if buffer-or-name
                   (get-buffer-create buffer-or-name)
                 (generate-new-buffer (concat "*"
@@ -78,7 +80,8 @@ from PROGRAM."
                                     (term-sentinel proc change)
                                     (goto-char (point-max)))))
         ;; (goto-char (point-max))
-        ))))
+        ))
+    buf))
 
 (defun term-run-shell-command (command &optional new-buffer-p)
   "Run COMMAND in terminal emulator.
