@@ -1,17 +1,33 @@
 [![Build Status](https://travis-ci.org/10sr/term-run-el.svg)](https://travis-ci.org/10sr/term-run-el)
 
 
+
 term-run-el
 ===========
 
-Run command in terminal buffer.
+Run command in a buffer of terminal-emulator.
+
+Originally Emacs provide `M-x term` function, which uses `term-mode`
+and works like a terminal-emulator.
+It can be used to run shell programs like `bash`, `zsh` or `ipython`
+interactively.
+However, this function does not provide the feature to invoke programs *with
+arguments*.
+
+Here comes `term-run`, which provide functions to invoke programs in a
+terminal-emulator buffer with arguments.
+For example, you can run `git` command in terminal buffer by typing
+`M-x term-run-shell-command RET git commit RET`.
+
+
+
 
 
 Usage
 -----
 
 
-* term-run-shell-command (command $optional new-buffer-p)
+* `term-run-shell-command (command $optional new-buffer-p)`
 
   Run COMMAND in terminal buffer.
 
@@ -22,7 +38,7 @@ this case, old process in the buffer will be destroyed.
   This function is intended mainly to be called interactively.
 
 
-* term-run (program &optional buffer-or-name &rest args)
+* `term-run (program &optional buffer-or-name &rest args)`
 
   Run PROGRAM in BUFFER-OR-NAME with ARGS in terminal buffer.
 
@@ -37,6 +53,7 @@ automatically from PROGRAM.
 
 License
 -------
+
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
