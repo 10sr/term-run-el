@@ -60,6 +60,7 @@
 (defvar term-run-shell-command-history nil
   "History for `term-run-shell-command'.")
 
+;;;###autoload
 (defun term-run (program &optional buffer-or-name &rest args)
   "Run PROGRAM in BUFFER-OR-NAME with ARGS in terminal buffer.
 
@@ -110,6 +111,7 @@ This function returns the buffer where the process starts running."
         ))
     buf))
 
+;;;###autoload
 (defun term-run-shell-command (command &optional new-buffer-p)
   "Run COMMAND in terminal buffer.
 
