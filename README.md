@@ -5,7 +5,7 @@
 term-run-el
 ===========
 
-Run command in a buffer of terminal-emulator.
+Run arbitrary command in a buffer of terminal-emulator.
 
 Originally Emacs provide `M-x term` function, which uses `term-mode`
 and works like a terminal-emulator.
@@ -16,8 +16,8 @@ arguments*.
 
 Here comes `term-run`, which provide functions to invoke programs in a
 terminal-emulator buffer with arguments.
-For example, you can run `git` command in terminal buffer by typing
-`M-x term-run-shell-command RET git commit RET`.
+For example, you can run `git` command with any arguments in terminal buffer by
+typing `M-x term-run-shell-command RET git commit RET`.
 
 
 

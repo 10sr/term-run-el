@@ -1,4 +1,4 @@
-;;; term-run.el --- Run command in terminal buffer
+;;; term-run.el --- Run arbitrary command in terminal buffer
 
 ;; Author: 10sr <8.slashes+el [at] gmail [dot] com>
 ;; URL: https://github.com/10sr/term-run-el
