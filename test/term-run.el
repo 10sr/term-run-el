@@ -18,9 +18,9 @@
      (search-forward ,str)))
 
 (ert-deftest test-term-run ()
-  (ert-term-run-make-output '("echo" "AAAAAAA")
-                            "AAAAAAA"))
+  (ert-term-run-make-output '("printf" "%04d" "112")
+                            "0112"))
 
 (ert-deftest test-term-run-shell-command ()
-  (ert-term-run-shell-command-make-output "echo BBBBBBBB"
-                                          "BBBBBBBB"))
+  (ert-term-run-shell-command-make-output "printf '%05d' 345"
+                                          "00345"))
