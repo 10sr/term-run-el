@@ -85,11 +85,13 @@ This function returns the buffer where the process starts running."
     buf))
 
 (defun term-run-shell-command (command &optional new-buffer-p)
-  "Run COMMAND in terminal emulator.
+  "Run COMMAND in terminal buffer.
 
 If NEW-BUFFER-P is given or called with prefix argument, generate new terminal
 buffer for running COMMAND.  Otherwise, use the same buffer.  In this case, old
-process in the buffer will be destroyed."
+process in the buffer will be destroyed.
+
+This function returns the buffer where the process starts running."
   (interactive (list (read-shell-command "Run program: "
                                          nil
                                          'term-run-shell-command-history)

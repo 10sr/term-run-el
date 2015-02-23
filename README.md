@@ -11,6 +11,25 @@ Usage
 -----
 
 
+* term-run-shell-command (command $optional new-buffer-p)
+
+  Run COMMAND in terminal buffer.
+
+  If NEW-BUFFER-P is given or called with prefix argument, generate new terminal buffer for running COMMAND.  Otherwise, use the same buffer.  In this case, old process in the buffer will be destroyed."
+
+  This function is intended mainly to be called interactively.
+
+
+* term-run (program &optional buffer-or-name &rest args)
+
+  Run PROGRAM in BUFFER-OR-NAME with ARGS.
+
+  If BUFFER-OR-NAME is given, use this buffer.  In this case, old process in the buffer will be destroyed.  Otherwise, new buffer will be generated automatically from PROGRAM.
+
+  This function returns the buffer where the process starts running.
+
+
+
 
 License
 -------
