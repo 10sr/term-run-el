@@ -24,7 +24,7 @@
 ;;; Commentary:
 
 ;; This package provide two functions to invoke programs with arguments
-;; in a buffer working as a terminal-emulator.
+;; in a buffer which works as a terminal-emulator.
 
 
 ;; term-run-shell-command (command $optional new-buffer-p)

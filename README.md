@@ -2,10 +2,10 @@
 
 
 
-term-run-el
+term-run.el
 ===========
 
-Run arbitrary command in a buffer working as a terminal-emulator.
+Run arbitrary command in a buffer which works as a terminal-emulator.
 
 Originally Emacs provide `M-x term` function, which uses `term-mode`
 and works as a terminal-emulator.
