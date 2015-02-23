@@ -41,7 +41,7 @@ If BUFFER-OR-NAME is given, use this buffer.  In this case, old process in the
 buffer will be destroyed.  Otherwise, new buffer will be generated automatically
 from PROGRAM.
 
-This function returns the buffer where the process ran."
+This function returns the buffer where the process starts running."
   (let* ((buf (if buffer-or-name
                   (get-buffer-create buffer-or-name)
                 (generate-new-buffer (concat "*"
