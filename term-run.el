@@ -35,7 +35,7 @@
   "History for `term-run-shell-command'.")
 
 (defun term-run (program &optional buffer-or-name &rest args)
-  "Run PROGRAM in BUFFER-OR-NAME with ARGS.
+  "Run PROGRAM in BUFFER-OR-NAME with ARGS in terminal buffer.
 
 If BUFFER-OR-NAME is given, use this buffer.  In this case, old process in the
 buffer will be destroyed.  Otherwise, new buffer will be generated automatically
