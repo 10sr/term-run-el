@@ -29,13 +29,16 @@ Usage
 
 * `term-run-shell-command (command $optional new-buffer-p)`
 
-  Run COMMAND in terminal buffer.
+  Run COMMAND in a terminal buffer.
 
-  If NEW-BUFFER-P is given or called with prefix argument, generate new
-terminal buffer for running COMMAND.  Otherwise, use the same buffer.  In
-this case, old process in the buffer will be destroyed.
+  This function is intended mainly to be called interactively and
+asks the command-line to invoke.
 
-  This function is intended mainly to be called interactively.
+  If called with prefix argument, this function will generate new
+terminal buffer for running COMMAND.  Otherwise, always use the buffer named
+`*Term-Run Shell Command*`. In this case, the old process in the buffer will be
+destroyed.
+
 
 
 * `term-run (program &optional buffer-or-name &rest args)`
