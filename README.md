@@ -17,7 +17,7 @@ arguments*.
 Here comes `term-run`, which provides functions to invoke programs in a
 terminal buffer with arguments.
 For example, you can run `git` command with any arguments in terminal buffer.
-Try typing `M-x term-run-shell-command RET git commit RET` !
+Try typing `M-x term-run-shell-command RET git add -p RET` !
 
 
 
