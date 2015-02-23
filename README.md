@@ -17,7 +17,7 @@ Usage
 
   If NEW-BUFFER-P is given or called with prefix argument, generate new
 terminal buffer for running COMMAND.  Otherwise, use the same buffer.  In
-this case, old process in the buffer will be destroyed."
+this case, old process in the buffer will be destroyed.
 
   This function is intended mainly to be called interactively.
 
