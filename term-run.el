@@ -23,7 +23,7 @@
 
 ;;; Commentary:
 
-;; This package provide two functions to invoke programs with arguments
+;; This package provides two functions to invoke programs with arguments
 ;; in a buffer which works as a terminal-emulator.
 
 

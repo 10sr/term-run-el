@@ -28,7 +28,7 @@ Usage
 -----
 
 
-* `term-run-shell-command (command $optional new-buffer-p)`
+* `term-run-shell-command (command &optional new-buffer-p)`
 
   Run COMMAND in a terminal buffer.
 
