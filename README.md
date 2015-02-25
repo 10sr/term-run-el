@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/10sr/term-run-el.svg)](https://travis-ci.org/10sr/term-run-el)
+[![MELPA Stable](http://stable.melpa.org/packages/term-run-badge.svg)](http://stable.melpa.org/#/term-run)
+[![MELPA](http://melpa.org/packages/term-run-badge.svg)](http://melpa.org/#/term-run)
 
 
 
