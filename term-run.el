@@ -86,7 +86,8 @@ This function returns the buffer where the process starts running."
       (let ((inhibit-read-only t))
         (goto-char (point-max))
         (insert "\n")
-        (insert (format "Start executing %s %S"
+        (insert (format "[%s] Run '%s' with args %S"
+                        dir
                         program
                         args))
         (add-text-properties (point-at-bol)
