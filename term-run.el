@@ -2,7 +2,7 @@
 
 ;; Author: 10sr <8.slashes+el [at] gmail [dot] com>
 ;; URL: https://github.com/10sr/term-run-el
-;; Version: 0.1
+;; Version: 0.1.2
 ;; Keywords: utility shell command term-mode
 
 ;; This file is not part of GNU Emacs.
