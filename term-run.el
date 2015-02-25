@@ -124,7 +124,9 @@ This function returns the buffer where the process starts running."
                                          'term-run-shell-command-history)
                      current-prefix-arg))
   (let ((buf (if new-buffer-p
-                 (generate-new-buffer "*Term-Run Shell Command*")
+                 (let ((cmdname (car (split-string command))))
+                   (generate-new-buffer (format "*Term-Run Shell Command<%s>*"
+                                                cmdname)))
                (get-buffer-create "*Term-Run Shell Command*")))
         (shell (or explicit-shell-file-name
                    shell-file-name
