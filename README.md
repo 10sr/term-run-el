@@ -18,9 +18,9 @@ arguments*.
 
 Here comes `term-run`, which provides functions to invoke arbitrary commands in
 terminal buffers.
-For example, you can run `git` command with any arguments in terminal buffer
+For example, you can run `ssh` command with any arguments in terminal buffer
 directly (without running bash with `M-x term` first).
-Try typing `M-x term-run-shell-command RET git add -p RET` !
+Try typing `M-x term-run-shell-command RET ssh git@github.com RET` !
 
 
 
