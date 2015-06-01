@@ -2,7 +2,7 @@
 
 ;; Author: 10sr <8slashes+el [at] gmail [dot] com>
 ;; URL: https://github.com/10sr/term-run-el
-;; Version: 0.1.2
+;; Version: 0.1.4
 ;; Keywords: utility shell command term-mode
 
 ;; This file is not part of GNU Emacs.
@@ -120,7 +120,9 @@ buffer for running COMMAND.  Otherwise, use the same buffer.  In this case, old
 process in the buffer will be destroyed.
 
 This function returns the buffer where the process starts running."
-  (interactive (list (read-shell-command "Run program: "
+  (interactive (list (read-shell-command (if current-prefix-arg
+                                             "C-u Run program: "
+                                           "Run program: ")
                                          nil
                                          'term-run-shell-command-history)
                      current-prefix-arg))
