@@ -133,10 +133,16 @@ This function returns the buffer where the process starts running."
                    shell-file-name
                    (getenv "SHELL")
                    "/bin/sh")))
-    (term-run shell
-              buf
-              shell-command-switch
-              command)))
+    (let ((proc (get-buffer-process buf)))
+      (if (and proc
+               (called-interactively-p 'any)
+               (not (y-or-n-p "A process is already running.  Kill and run this command? ")))
+          (message "term-run: Command cancelled by user: \"%s\""
+                   command)
+        (term-run shell
+                  buf
+                  shell-command-switch
+                  command)))))
 
 
 (provide 'term-run)
