@@ -9,7 +9,8 @@ addons:
     sources:
       - cassou-emacs
     packages:
-      - $EMACS
+      - emacs24
+      - emacs-snapshot
 before_script:
   - $EMACS --version
 script: make test emacs=$EMACS
