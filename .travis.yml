@@ -1,13 +1,15 @@
 # http://www.kaichan.info/blog/2014-02-23-emacs-cask.html
 language: emacs-lisp
+sudo: false
 env:
   - EMACS=emacs24
   - EMACS=emacs-snapshot
-before_install:
-  - sudo add-apt-repository -y ppa:cassou/emacs
-  - sudo apt-get update -qq
-install:
-  - sudo apt-get install -qq $EMACS
+addon:
+  apt:
+    sources:
+      - cassou-emacs
+    packages:
+      - $EMACS
 before_script:
   - $EMACS --version
 script: make test emacs=$EMACS
