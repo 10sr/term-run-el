@@ -3,14 +3,12 @@ language: emacs-lisp
 sudo: false
 env:
   - EMACS=emacs24
-  - EMACS=emacs-snapshot
 addons:
   apt:
     sources:
       - cassou-emacs
     packages:
       - emacs24
-      - emacs-snapshot
 before_script:
   - $EMACS --version
 script: make test emacs=$EMACS
