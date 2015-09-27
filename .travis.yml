@@ -4,7 +4,7 @@ sudo: false
 env:
   - EMACS=emacs24
   - EMACS=emacs-snapshot
-addon:
+addons:
   apt:
     sources:
       - cassou-emacs
