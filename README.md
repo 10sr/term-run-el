@@ -9,7 +9,7 @@ term-run.el
 
 Run arbitrary command in a terminal buffer.
 
-Originally Emacs provide `M-x term` function, which uses `term-mode`
+Currently Emacs provide `M-x term`, which uses `term-mode`
 and works as a terminal-emulator.
 It can be used to run shell programs like `bash`, `zsh` or `ipython`
 interactively.
