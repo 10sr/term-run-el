@@ -86,10 +86,21 @@ This function returns the buffer where the process starts running."
       (let ((inhibit-read-only t))
         (goto-char (point-max))
         (insert "\n")
-        (insert (format "[%s] Run '%s' with args %S"
-                        dir
-                        program
-                        args))
+        (if (and (member program
+                         (list explicit-shell-file-name
+                               shell-file-name
+                               (getenv "SHELL")
+                               "/bin/sh"))
+                 (string= (car args) shell-command-switch)
+                 (eq (length args)
+                     2))
+            (insert (format "[%s] >> %s"
+                            dir
+                            (nth 1 args)))
+          (insert (format "[%s] >> %s %s"
+                          dir
+                          (shell-quote-argument program)
+                          (mapconcat 'shell-quote-argument args " "))))
         (add-text-properties (point-at-bol)
                              (point-at-eol)
                              '(face bold))
