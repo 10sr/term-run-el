@@ -95,10 +95,10 @@ This function returns the buffer where the process starts running."
                  (eq (length args)
                      2))
             (insert (format "[%s] >> %s"
-                            dir
+                            (abbreviate-file-name dir)
                             (nth 1 args)))
           (insert (format "[%s] >> %s %s"
-                          dir
+                          (abbreviate-file-name dir)
                           (shell-quote-argument program)
                           (mapconcat 'shell-quote-argument args " "))))
         (add-text-properties (point-at-bol)
