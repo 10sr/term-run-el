@@ -115,9 +115,12 @@ This function returns the buffer where the process starts running."
       (if (ignore-errors (get-buffer-process buf))
           (set-process-sentinel (get-buffer-process buf)
                                 (lambda (proc change)
-                                  (with-current-buffer (process-buffer proc)
-                                    (term-sentinel proc change)
-                                    (goto-char (point-max)))))
+                                  (let* ((buf (process-buffer proc))
+                                         (win (get-buffer-window buf)))
+                                    (when win
+                                      (with-selected-window win
+                                        (term-sentinel proc change)
+                                        (goto-char (point-max)))))))
         ;; (goto-char (point-max))
         ))
     buf))
