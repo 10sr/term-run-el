@@ -11,7 +11,7 @@ Run arbitrary command in a terminal buffer.
 
 Currently Emacs provide `M-x term`, which uses `term-mode`
 and works as a terminal-emulator.
-It can be used to run shell programs like `bash`, `zsh` or `ipython`
+It is useful to run shell programs like `bash`, `zsh` or `ipython`
 interactively.
 However, this function does not provide the feature to invoke programs *with
 arguments*.
