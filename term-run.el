@@ -77,6 +77,7 @@ This function returns the buffer where the process starts running."
          (proc (get-buffer-process buf))
          (dir default-directory))
     (and proc
+         ;; Use signal-process and SIGTERM instead?
          (delete-process proc))
     (display-buffer buf)
     (with-current-buffer buf
