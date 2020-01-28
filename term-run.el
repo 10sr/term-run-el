@@ -77,8 +77,8 @@ This function returns the buffer where the process starts running."
          (proc (get-buffer-process buf))
          (dir default-directory))
     (and proc
-         ;; Use signal-process and SIGTERM instead?
-         (delete-process proc))
+         ;; What to do when a process won't stop for a long time?
+         (interrupt-process proc))
     (display-buffer buf)
     (with-current-buffer buf
       (cd dir)
@@ -132,7 +132,7 @@ This function returns the buffer where the process starts running."
 
 If NEW-BUFFER-P is given or called with prefix argument, generate new terminal
 buffer for running COMMAND.  Otherwise, use the same buffer.  In this case, old
-process in the buffer will be destroyed.
+process in the buffer will be destroyed after asking to user.
 
 This function returns the buffer where the process starts running."
   (interactive (list (read-shell-command (if current-prefix-arg
@@ -153,7 +153,7 @@ This function returns the buffer where the process starts running."
     (let ((proc (get-buffer-process buf)))
       (if (and proc
                (called-interactively-p 'any)
-               (not (y-or-n-p "A process is already running.  Kill and run this command? ")))
+               (not (y-or-n-p "A process is already running.  Terminate it and start this command? ")))
           (message "term-run: Command cancelled by user: \"%s\""
                    command)
         (term-run shell
